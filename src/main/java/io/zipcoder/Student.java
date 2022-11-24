@@ -50,12 +50,12 @@ public class Student {
             examScores.set(examNumber - 1, newScore);
         }
         public double getAverageExamScore() {
-            Double total = 0.0;
-            for (int i = 0; i < examScores.size(); i++) {
-                total += examScores.get(i);
+            double total = 0.0;
+            double size = this.examScores.size();
+            for (int i = 0; i < size; i++) {
+                total += this.examScores.get(i);
             }
-            Double average = total / (examScores.size() - 1);
-            return average;
+            return total / size;
         }
 
         @Override
