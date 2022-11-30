@@ -6,7 +6,8 @@ public class Classroom {
 
     public Classroom(int maxNumberOfStudents) {
     }
-    public Classroom(Student[] students) {
+    public Classroom(Student[] classmates) {
+        students = classmates;
     }
     public Classroom() {
         Student[] students = new Student[30];
@@ -15,7 +16,7 @@ public class Classroom {
     public Student[] getStudents() {
         return students;
     }
-    public double getAverageExamScore() {
+    public double getAverageExamScoreStudents() {
         double testTotalSum = 0.0;
         int totalStudents = students.length;
         for (int i = 0; i < totalStudents; i++) {
